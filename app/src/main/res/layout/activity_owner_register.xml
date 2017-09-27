@@ -1,0 +1,226 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/hall_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hall_name"
+            android:inputType="text"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:maxLength="25"/>
+
+
+        <EditText
+            android:id="@+id/hall_ownername"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/hall_ownername"
+            android:maxLength="25"
+            android:inputType="text"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            />
+        <EditText
+            android:id="@+id/hall_owneremail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/email"
+            android:maxLength="25"
+            android:inputType="textEmailAddress"
+            />
+        <EditText
+            android:id="@+id/hall_ownerpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/password"
+            android:maxLength="10"
+            android:inputType="textPassword"
+
+            />
+
+        <EditText
+            android:id="@+id/hall_ownerphoneno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/phoneno"
+            android:maxLength="10"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/hall_ownerphoneno2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/phoneno2"
+            android:maxLength="10"
+            android:inputType="number"
+
+            />
+
+        <EditText
+            android:id="@+id/hall_owneraddress"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/address"
+            android:maxLength="20"
+            android:inputType="textPostalAddress"
+
+            />
+
+        <Spinner
+            android:id="@+id/hall_ownerspinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/state_arrays"
+            android:prompt="@string/state_prompt" />
+
+        <Spinner
+            android:id="@+id/hall_ownerspinner2"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/city_Tamilnadu"
+            android:prompt="@string/city_prompt" />
+
+        <EditText
+            android:id="@+id/seat_capacity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/seat_capacity"
+            android:maxLength="10"
+            android:inputType="number"
+
+            />
+        <EditText
+            android:id="@+id/dinning_capacity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/dinning_capacity"
+            android:maxLength="10"
+            android:inputType="number"
+
+            />
+
+        <EditText
+            android:id="@+id/parking"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/parking"
+            android:maxLength="10"
+            android:inputType="number"
+
+            />
+
+        <TextView
+            android:id="@+id/AC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="TextView" />
+
+        <RadioGroup
+            android:id="@+id/radioAC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+        <RadioButton android:id="@+id/radio_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yes"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton android:id="@+id/radio_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:onClick="onRadioButtonClicked"/>
+
+         </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/Food_Allowed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Food Allowed" />
+
+        <RadioGroup
+            android:id="@+id/radio_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton android:id="@+id/radio_veg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/veg"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/radio_nonveg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nonveg"
+                android:onClick="onRadioButtonClicked"/>
+
+        </RadioGroup>
+        <TextView
+            android:id="@+id/Upload_hallimage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Upload Hall Image" />
+        <Button
+            android:id="@+id/btnCapturePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click"
+            android:layout_marginBottom="@dimen/margin_medium"/>
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnOnwerRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="#3F51B5"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/btn_register"
+            />
+
+        <Button
+            android:id="@+id/btnOwnerLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="#3F51B5"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/btn_link_to_login"
+            android:layout_marginBottom="@dimen/padding_medium"
+            />
+
+    </LinearLayout>
+</ScrollView>
+

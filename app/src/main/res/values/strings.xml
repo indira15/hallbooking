@@ -1,0 +1,99 @@
+<resources>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="hall_name">Hall Name</string>
+    <string name="hall_ownername">Hall Owner Name</string>
+    <string name="seat_capacity">Seat Capacity</string>
+    <string name="dinning_capacity">Dinning Capacity</string>
+    <string name="parking">Parking</string>
+    <string name="Submit">Submit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="veg">Veg</string>
+    <string name="nonveg">Non-Veg</string>
+    <string name="name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phoneno">Phone number</string>
+    <string name="phoneno2">Another Contact number</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="prompt_password">Password</string>
+    <string name="password">Password</string>
+
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registered! Login.</string>
+    <string name="btnOwner_Hall_Register">Hall Registration</string>
+    <string name="btnOwner_Hall_Login">Hall Owner Login</string>
+    <string name="btnUser_Register">User Registration</string>
+    <string name="btnUser_Login">User Login</string>
+
+
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_login">Login</string>
+    <string name="postbook">POST BOOK</string>
+    <string name="viewbook">VIEW BOOK</string>
+    <string name="message">COMMENTS</string>
+    <string name="viewfeedback">VIEW FEEDBACK</string>
+    <string name="postfeedback">POST FEEDBACK</string>
+    <string name="post_message">COMMENTS</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+    <string name="addhall">Add Hall</string>
+    <string name="adduser"> Add User</string>
+
+
+    <string name="app_name">HallBookingApp</string>
+
+    <string name="state_prompt">Choose a state</string>
+    <string name="city_prompt">Choose a city</string>
+
+    <string-array name="state_arrays">
+        <item>Andhra pradesh</item>
+
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chandigarh</item>
+        <item>Chhattisgarh</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharastra</item>
+        <item>Tamilnadu</item>
+        <item>UttarPradesh</item>
+
+    </string-array>
+
+    <string-array name="city_Tamilnadu">
+
+        <item>Coimbatore</item>
+        <item>Chennai</item>
+        <item>Erode</item>
+        <item>Salem</item>
+
+    </string-array>
+
+
+    <string-array name="city_Gujarat">
+
+        <item>Ahemdabad</item>
+        <item>Surat</item>
+        <item>Varodra</item>
+    </string-array>
+
+</resources>
+

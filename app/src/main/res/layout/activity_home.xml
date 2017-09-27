@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btnOwner_Hall_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#3F51B5"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/btnOwner_Hall_Register" />
+
+    <Button
+        android:id="@+id/btnOwner_Hall_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#3F51B5"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/btnOwner_Hall_Login" />
+
+    <Button
+        android:id="@+id/btnUser_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#3F51B5"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/btnUser_Register" />
+
+    <Button
+        android:id="@+id/btnUserl_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#3F51B5"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/btnUser_Login" />
+</LinearLayout>
