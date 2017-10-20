@@ -5,6 +5,14 @@
     <string name="prompt_email">Email</string>
     <string name="hall_name">Hall Name</string>
     <string name="hall_ownername">Hall Owner Name</string>
+    <string name="hall_owneremail">Hall Owner Email</string>
+    <string name="hall_ownerpassword">Hall Owner password</string>
+    <string name="hall_ownerphoneno">Phone number</string>
+    <string name="hall_ownerphoneno2">Another Contact number</string>
+    <string name="hall_owneraddress">Address</string>
+
+
+
     <string name="seat_capacity">Seat Capacity</string>
     <string name="dinning_capacity">Dinning Capacity</string>
     <string name="parking">Parking</string>
@@ -13,6 +21,10 @@
     <string name="no">No</string>
     <string name="veg">Veg</string>
     <string name="nonveg">Non-Veg</string>
+
+
+
+
     <string name="name">Full Name</string>
     <string name="email">Email</string>
     <string name="phoneno">Phone number</string>
@@ -49,14 +61,20 @@
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."</string>
-    <string name="addhall">Add Hall</string>
-    <string name="adduser"> Add User</string>
+
+
+    <string name="addhall">Hall Register</string>
+    <string name="adduser"> User Register</string>
+    <string name="Loginuser">  User Login</string>
+    <string name="Loginowner">  Owner Signin</string>
+
 
 
     <string name="app_name">HallBookingApp</string>
 
     <string name="state_prompt">Choose a state</string>
     <string name="city_prompt">Choose a city</string>
+    <string name="cate_prompt">Choose categories</string>
 
     <string-array name="state_arrays">
         <item>Andhra pradesh</item>
@@ -67,8 +85,11 @@
         <item>Chandigarh</item>
         <item>Chhattisgarh</item>
         <item>Gujarat</item>
+        <item>Goa</item>
         <item>Haryana</item>
         <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
         <item>Karnataka</item>
         <item>Kerala</item>
         <item>Madhya Pradesh</item>
@@ -76,7 +97,25 @@
         <item>Tamilnadu</item>
         <item>UttarPradesh</item>
 
+
+
+
+
+
     </string-array>
+
+    <string-array name="arrays_city">
+
+        <item>Coimbatore</item>
+        <item>Chennai</item>
+        <item>Erode</item>
+        <item>Salem</item>
+        <item>Ahemdabad</item>
+        <item>Surat</item>
+        <item>Varodra</item>
+
+    </string-array>
+
 
     <string-array name="city_Tamilnadu">
 
@@ -84,6 +123,9 @@
         <item>Chennai</item>
         <item>Erode</item>
         <item>Salem</item>
+        <item>Ahemdabad</item>
+        <item>Surat</item>
+        <item>Varodra</item>
 
     </string-array>
 
@@ -93,6 +135,18 @@
         <item>Ahemdabad</item>
         <item>Surat</item>
         <item>Varodra</item>
+    </string-array>
+
+
+    <string-array name="categories">
+
+        <item>Marriage</item>
+        <item>Party</item>
+        <item>Baby Shower</item>
+        <item>Engagement party</item>
+        <item>Functions</item>
+        <item>Meetings</item>
+        <item>Conference</item>
     </string-array>
 
 </resources>

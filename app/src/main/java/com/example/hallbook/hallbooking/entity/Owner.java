@@ -11,66 +11,93 @@ public class Owner  implements Serializable{
 
 
     private int id;
+    private String hallname;
     private String ownername;
     private String owneremail;
-    private String  owneraddress;
+    private String ownerpassword;
+    private String owneraddress;
     private String ownerphoneno;
     private String ownerphoneno2;
     private String ownercity;
     private String ownerstate;
-    private String ownerpassword;
-    private String ownerparking;
-    private String ownerseatcapacity;
-    private String ownerdinningcapacity;
+    private String parking;
+    private String seatcapacity;
+    private String dinningcapacity;
+    private String ac;
+    private String food;
+    private String imageurl;
 
 
 
-    public void setOwnername(String name) {this.ownername = name;}
+    public void setHallname(String hallname) {this.hallname = hallname;}
 
-    public void setEmail(String email) {
-        this.owneremail = email;
+    public String getHallname() {return hallname;}
+
+    public void setOwnername(String ownername) {this.ownername = ownername;}
+
+    public String getOwnername() {return ownername;}
+
+    public void setOwneremail(String owneremail) {this.owneremail = owneremail;}
+
+    public String getOwneremail() {return owneremail;}
+
+    public void setOwnerpassword(String ownerpassword) {this.ownerpassword = ownerpassword;}
+
+    public String getOwnerpassword() {return ownerpassword;}
+
+    public void setOwnerphoneno(String ownerphoneno) {this.ownerphoneno = ownerphoneno;}
+
+    public String getOwnerphoneno() {return ownerphoneno;}
+
+    public void setOwnerphoneno2(String ownerphoneno2) {this.ownerphoneno2 = ownerphoneno2;}
+
+    public String getOwnerphoneno2() {return ownerphoneno2;}
+
+    public void setOwneraddress(String owneraddress) {this.owneraddress = owneraddress;}
+
+    public String getOwneraddress() {return owneraddress;}
+
+    public void setOwnercity(String ownercity) {this.ownercity = ownercity;}
+
+    public String getOwnercity() {return ownercity;}
+
+    public void setOwnerstate(String ownerstate) {this.ownerstate = ownerstate;}
+
+    public String getOwnerstate() {return ownerstate;}
+
+    public void setseatcapacity(String seatcapacity) {this.seatcapacity = seatcapacity;}
+
+    public String getSeatcapacity() {return seatcapacity;}
+
+    public void setDinningcapacity(String dinningcapacity) {this.dinningcapacity = dinningcapacity;}
+
+    public String getDinningcapacity() {return dinningcapacity;}
+
+    public void setparking(String parking) {this.parking = parking;}
+
+    public String getparking() {return parking;}
+
+
+    public void setAc(String ac) {this.ac = ac;}
+
+    public String getAc() {return ac;}
+
+    public void setFood(String food) {this.food = food;}
+
+    public String getFood() {return food;}
+
+    public String getImageurl() {
+        return imageurl;
     }
 
-    public void setAddress(String address) {
-        this.owneraddress = address;
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
     }
 
-    public void setPhoneno(String phoneno) { this.ownerphoneno = phoneno; }
-
-    public void setPhoneno2(String phoneno2) { this.ownerphoneno2 = phoneno2;}
-
-    public void setCity(String city) { this.ownercity=city;}
-
-    public void setState(String state) {this.ownerstate=state;}
-
-    public void setPassword(String password){this.ownerpassword=password;}
-
-    public String getOwnername() { return ownername;}
-
-    public String getEmail() {
-        return owneremail;
-    }
-
-    public String getAddress() {
-        return owneraddress;
-    }
-
-    public String getPhoneno() {
-        return ownerphoneno;
-    }
-
-    public String getPhoneno2() {
-        return ownerphoneno2;
-    }
-
-    public  String getCity() { return ownercity;}
-
-    public  String getState() {return ownerstate;}
-
-    public String getPassword() {return ownerpassword;}
 
     public int getId() {
         return id;
     }
+
 
 }

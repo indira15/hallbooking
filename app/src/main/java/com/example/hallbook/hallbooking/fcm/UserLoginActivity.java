@@ -292,9 +292,9 @@ public class UserLoginActivity extends AppCompatActivity implements LoaderManage
                     PreferenceUtils.set(getApplicationContext(), PreferenceUtils.SAVED_USER_ID,
                             responseBody.getUser().getId());
                     Utils.showToast(this, "Success!" + responseBody.getMessage());
-                   /* Intent listIntent = new Intent(this, BooksListActivity.class);
-                    listIntent.setAction(BooksListActivity.RESTART_ACTION);
-                    startActivity(listIntent);*/
+                   Intent listIntent = new Intent(this, OwnersListActivity.class);
+                    listIntent.setAction(OwnersListActivity.RESTART_ACTION);
+                    startActivity(listIntent);
                     finish();
                 } else {
                     showProgress(false);

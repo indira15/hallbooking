@@ -9,6 +9,7 @@ public class Response {
     private int success;
     private String message;
     private User user;
+    private Owner owner;
 
     public int getSuccess() {
         return success;
@@ -28,5 +29,10 @@ public class Response {
 
     public User getUser() {
         return user;
+    }
+
+    public Owner getOwner()
+    {
+        return owner;
     }
 }

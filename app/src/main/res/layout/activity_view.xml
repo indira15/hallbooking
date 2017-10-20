@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:weightSum="1">
+
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/compactcalendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:compactCalendarBackgroundColor="#00bcd4"
+        app:compactCalendarCurrentDayBackgroundColor="#1a8cd7"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#E57373"
+        app:compactCalendarTextColor="#FFF"
+        app:compactCalendarTextSize="12sp" />
+
+
+
+    <Button
+        android:id="@+id/dateselected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#3F51B5"
+        android:padding="@dimen/padding_medium"
+        android:text="Date Selected" />
+
+
+    <TextView
+        android:id="@+id/selecteddate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_margin="@dimen/margin_medium"
+        />
+
+
+    <TextView
+        android:id="@+id/selectcategories"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Select a categories" />
+
+    <Spinner
+        android:id="@+id/categories_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:entries="@array/categories"
+        android:prompt="@string/cate_prompt" />
+
+    <Button
+        android:id="@+id/booking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="#3F51B5"
+        android:padding="@dimen/padding_medium"
+        android:text="Book" />
 
 </LinearLayout>

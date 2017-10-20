@@ -12,9 +12,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.hallbook.hallbooking.R;
 import com.example.hallbook.hallbooking.entity.Response;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import retrofit2.Callback;
 import retrofit2.Call;
 
@@ -35,6 +40,8 @@ public class UserRegisterActivity extends AppCompatActivity implements View.OnCl
     private Spinner spinnerCity;
     private Spinner spinnerState;
 
+    public String city,state;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,62 +53,83 @@ public class UserRegisterActivity extends AppCompatActivity implements View.OnCl
         inputPhoneno = (EditText) findViewById(R.id.phoneno);
         inputPhoneno2 = (EditText) findViewById(R.id.phoneno2);
         inputAddress = (EditText) findViewById(R.id.address);
-        spinnerCity = (Spinner) findViewById(R.id.spinner);
-        spinnerState = (Spinner) findViewById(R.id.spinner2);
+        spinnerState = (Spinner) findViewById(R.id.spinnerstate);
+        spinnerCity = (Spinner) findViewById(R.id.spinnercity);
         btnRegister = (Button) findViewById(R.id.btnRegister);
         btnLinkToLogin = (Button) findViewById(R.id.btnLogin);
         btnLinkToLogin.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
-        spinnerCity.setOnItemSelectedListener(this);
         spinnerState.setOnItemSelectedListener(this);
+        spinnerCity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                city= spinnerCity.getSelectedItem().toString();
+                Toast.makeText(UserRegisterActivity.this, city, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
 
     }
 
 
     @Override
 
-    public void onItemSelected(AdapterView<?> parent, View arg1, int pos, long arg3) {
+    public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+                               long arg3)
+            //AdapterView<?> parent, View arg1, int pos, long arg3)
+    {
+        state= spinnerState.getSelectedItem().toString();
+        Toast.makeText(this, state, Toast.LENGTH_SHORT).show();
 
-        parent.getItemAtPosition(pos);
 
-        if (pos == 0) {
+        if(state.contentEquals("Gujarat")) {
 
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter
+            Toast.makeText(this, city, Toast.LENGTH_SHORT).show();
+            List<String> list = new ArrayList<String>();
+            list.add("Ahemdabad");
+            list.add("surat");
+            list.add("Others");
+            ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_spinner_item, list);
+            dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            dataAdapter2.notifyDataSetChanged();
+            spinnerCity.setAdapter(dataAdapter2);
+            Toast.makeText(this, city, Toast.LENGTH_SHORT).show();
 
-                    .createFromResource(this, R.array.state_arrays,
 
-                            android.R.layout.simple_spinner_item);
-
-            spinnerCity.setAdapter(adapter);
-
-        } else if (pos == 1) {
-
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter
-
-                    .createFromResource(this, R.array.city_Tamilnadu,
-
-                            android.R.layout.simple_spinner_item);
-
-            spinnerCity.setAdapter(adapter);
-
-        } else if (pos == 2) {
-
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter
-
-                    .createFromResource(this, R.array.city_Gujarat,
-
-                            android.R.layout.simple_spinner_item);
-
-            spinnerCity.setAdapter(adapter);
+        }
+        if(state.contentEquals("Tamilnadu")) {
+            List<String> list = new ArrayList<String>();
+            list.add("erode");
+            list.add("salem");
+            list.add("coimbatore");
+            ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_spinner_item, list);
+            dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            dataAdapter3.notifyDataSetChanged();
+            spinnerCity.setAdapter(dataAdapter3);
+            Toast.makeText(this, city, Toast.LENGTH_SHORT).show();
 
         }
 
+
+
     }
+
+
 
 
     @Override
 
     public void onNothingSelected(AdapterView<?> arg0) {
+
+        Toast.makeText(this,"Please Select the policy type !!", Toast.LENGTH_LONG).show();
+        return;
 
     }
 
@@ -113,9 +141,8 @@ public class UserRegisterActivity extends AppCompatActivity implements View.OnCl
         String phoneno = inputPhoneno.getText().toString().trim();
         String phoneno2 = inputPhoneno2.getText().toString().trim();
         String address = inputAddress.getText().toString().trim();
-        String city = spinnerCity.toString().trim();
-        String state = spinnerState.toString().trim();
-
+        String city = spinnerCity.getSelectedItem().toString();
+        String state = spinnerState.getSelectedItem().toString();
         boolean
                 error = false;
         if (TextUtils.isEmpty(name)) {
@@ -138,9 +165,23 @@ public class UserRegisterActivity extends AppCompatActivity implements View.OnCl
             inputPhoneno.setError("Please enter the Phone number");
         }
 
+        if(inputPhoneno.length() <9 || inputPhoneno.length() >11 && !Patterns.PHONE.matcher(phoneno).matches() )
+        {
+            error = true;
+            inputPhoneno.setError("Please enter the valid Phone number");
+
+        }
+
         if (TextUtils.isEmpty(phoneno2)) {
             error = true;
             inputPhoneno2.setError("Please enter the Contact number");
+        }
+
+        if(inputPhoneno2.length() <9 || inputPhoneno2.length() >11 && !Patterns.PHONE.matcher(phoneno2).matches() )
+        {
+            error = true;
+            inputPhoneno2.setError("Please enter the valid Phone number");
+
         }
 
         if (TextUtils.isEmpty(address)) {
@@ -148,15 +189,16 @@ public class UserRegisterActivity extends AppCompatActivity implements View.OnCl
             inputAddress.setError("Please enter the address");
         }
 
-        if (TextUtils.isEmpty(city)) {
+       if (TextUtils.isEmpty(state)) {
             error = true;
-            //spinnerCity.setError("Please enter the City");
+            Utils.showToast(this, "Please select");
         }
 
-        if (TextUtils.isEmpty(state)) {
+        if (TextUtils.isEmpty(city)) {
             error = true;
-            //spinnerState.setError("Please enter the state");
+            Utils.showToast(this, "Please select");
         }
+
 
         if (error) {
             Utils.showToast(this, "Please fill the required details");
@@ -199,9 +241,9 @@ public class UserRegisterActivity extends AppCompatActivity implements View.OnCl
                   /*  FirebaseMessaging.getInstance().subscribeToTopic("usedbooks_" + responseBody
                             .getUser().getId());   */
                     Utils.showToast(UserRegisterActivity.this, "Success!" + responseBody.getMessage());
-                   /* Intent listIntent = new Intent(this, HomeActivity.class);
-                    listIntent.setAction(HomeActivity.RESTART_ACTION);
-                    startActivity(listIntent); */
+                    Intent listIntent = new Intent(this, OwnersListActivity.class);
+                    listIntent.setAction(OwnersListActivity.RESTART_ACTION);
+                    startActivity(listIntent);
                     finish();
                 } else {
                     btnRegister.setText("Submit");

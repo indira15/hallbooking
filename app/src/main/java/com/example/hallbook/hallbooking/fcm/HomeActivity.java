@@ -33,29 +33,31 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         UserLogin.setOnClickListener(this);
     }
 
+
+    @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-
-            case R.id.btnOwner_Hall_Register:
-                startActivity(new Intent(this, OwnerRegisterActivity.class));
-
-           // case R.id.btnUser_Register:
-                //startActivity(new Intent(this,UserRegisterActivity.class));
-//
-           /* case R.id.btnOwner_Hall_Login:
-                startActivity(new Intent(this, .class));
+            switch (view.getId()) {
 
 
+                case R.id.btnOwner_Hall_Register:
+                    startActivity(new Intent(this, OwnerRegisterActivity.class));
+                    break;
 
-            case R.id.btnUserl_Login:
-                startActivity(new Intent(this,UserLoginActivity.class));
-*/
+                case R.id.btnUser_Register:
+                    startActivity(new Intent(this,UserRegisterActivity.class));
+                    break;
+                case R.id.btnOwner_Hall_Login:
+                    startActivity(new Intent(this, OwnerLoginActivty.class));
+                    break;
 
-        }
+                case R.id.btnUserl_Login:
+                    startActivity(new Intent(this,UserLoginActivity.class));
+                    break;
+
+
+            }
     }
-
-
-        }
+}
 
 
 

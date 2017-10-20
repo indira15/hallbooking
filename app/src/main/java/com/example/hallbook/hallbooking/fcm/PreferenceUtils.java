@@ -12,6 +12,8 @@ public class PreferenceUtils {
 
     public static String SAVED_USER_NAME = "saved_user";
     public static String SAVED_USER_ID = "saved_user_id";
+    public static String SAVED_OWNER_NAME="saved_owner";
+    public static String SAVED_OWNER_ID = "saved_owner_id";
 
     public static void set(final Context context, final String key, final Object value) {
         SharedPreferences.Editor sharedPreferenceEditor = PreferenceManager.getDefaultSharedPreferences(context)
@@ -80,7 +82,14 @@ public class PreferenceUtils {
 
     public static boolean isLoggedIn(Context context) {
         return PreferenceUtils.getIntegerPrefs(context, SAVED_USER_ID , 0) > 0;
+
     }
+
+    public static boolean isOwnerLoggedIn(Context context) {
+
+        return  PreferenceUtils.getIntegerPrefs(context, SAVED_OWNER_ID,0) > 0;
+    }
+
 
 
 

@@ -34,11 +34,6 @@ public interface GetUserInterface {
             @Field("city") String city,
             @Field("state") String state);
 
-  /*  @POST("notifyuser.php")
-    @FormUrlEncoded
-    Call<Response> notifyOwner(
-            @Field("book_id") int book_id,
-            @Field("user_id") int user_id);   */
 
 
 

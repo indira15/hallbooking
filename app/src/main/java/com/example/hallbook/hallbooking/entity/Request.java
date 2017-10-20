@@ -5,4 +5,21 @@ package com.example.hallbook.hallbooking.entity;
  */
 
 public class Request {
+
+
+    private String operation;
+    private User user;
+    private Owner owner;
+
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
 }
